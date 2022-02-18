@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IHero} from  '../interfaces/i-hero';
-import { HeroService } from '../hero.service';
+import {IHero} from  '../../interfaces/i-hero';
+import { HeroService } from '../../services/hero.service';
 //import { MessageService } from '../message.service'
 
 @Component({

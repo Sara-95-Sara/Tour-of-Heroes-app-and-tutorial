@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HeroService } from '../hero.service';
-import { IHero } from '../interfaces/i-hero';
+import { HeroService } from '../../services/hero.service';
+import { IHero } from '../../interfaces/i-hero';
 import  { Location } from '@angular/common';
 
 @Component({

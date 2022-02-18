@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IHero } from './interfaces/i-hero';
-import { HEROES } from './mock-heroes';
+import { IHero } from '../interfaces/i-hero';
+import { HEROES } from '../mock-heroes';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap} from 'rxjs/operators';
 import { MessageService } from './message.service';
