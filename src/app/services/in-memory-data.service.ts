@@ -20,7 +20,7 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
     return {heroes};
   }
-  genId(heroes: IHero[]: number) {
+  genId(heroes: IHero[]): number {
     return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) +1 : 11;
   }
 }
