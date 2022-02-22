@@ -5,6 +5,12 @@ h2 {
   margin-top : 50px;
   color: blue;
 }
+.list{
+  text-align: center;
+}
+.list ul{
+  display: inline-block;
+}
 div {
   text-align: center;
   margin-bottom: 30px;
@@ -75,5 +81,4 @@ div {
   .heroes .name {
     align-self: center;
   }
-
   

@@ -19,7 +19,7 @@
   </button>
 </div>
 
-
+<div class="list">
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
         <a routerLink="/detail/{{hero.id}}">
@@ -29,6 +29,7 @@
   (click)="delete(hero)">x</button>
     </li>
 </ul>
+</div>
 
 <hr>
 
