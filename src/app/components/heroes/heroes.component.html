@@ -20,15 +20,15 @@
 </div>
 
 <div class="list">
-<ul class="list_heroes">
+  <ul class="list_heroes">
     <li *ngFor="let hero of heroes">
-        <a routerLink="/detail/{{hero.id}}">
-         <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </a>
-        <button type="button" class="list_heroes_delete" title="delete hero"
-  (click)="delete(hero)">x</button>
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button type="button" class="list_heroes_delete" title="delete hero"
+        (click)="delete(hero)">x</button>
     </li>
-</ul>
+  </ul>
 </div>
 
 <hr>
