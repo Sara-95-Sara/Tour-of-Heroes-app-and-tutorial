@@ -1,20 +1,31 @@
 h1 {
     margin-bottom: 0;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: #7070dd;
+  }
+  nav {
+    text-align: center;
   }
   nav a {
+    width: 100px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
     padding: 1rem;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 2px;
+    margin-left: 15px;
     display: inline-block;
     background-color: #e8e8e8;
     color: #3d3d3d;
-    border-radius: 4px;
-  }
+    border: 10px groove #7070dd;
+   }
   
   nav a:hover {
-    color: white;
-    background-color: #42545C;
+    color: #7070dd;
+    background-color:  #cad9df;
   }
   nav a.active {
-    background-color: black;
+    background-color: #80d9ff;
   }

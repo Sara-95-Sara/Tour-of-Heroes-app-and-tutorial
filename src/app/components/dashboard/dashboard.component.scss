@@ -1,5 +1,7 @@
 h2 {
     text-align: center;
+    font-family: 'Lobster', cursive;
+    color: blue;
   }
   
   .heroes-menu {
@@ -17,7 +19,7 @@ h2 {
   }
   
   a {
-    background-color: #3f525c;
+    background-color:#3f525c;
     border-radius: 2px;
     padding: 1rem;
     font-size: 1.2rem;
@@ -44,5 +46,8 @@ h2 {
   }
   
   a:hover {
-    background-color: #000;
+    background-color:  #cad9df;
+    color: blue;
+    border: 5px double  #f0f0ff;
   }
+  
