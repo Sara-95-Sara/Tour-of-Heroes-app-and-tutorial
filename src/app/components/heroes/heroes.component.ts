@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {IHero} from  '../../interfaces/i-hero';
 import { HeroService } from '../../services/hero.service';
+import  { Hero } from '../../models/hero';
 //import { MessageService } from '../message.service'
 
 @Component({
@@ -9,23 +10,16 @@ import { HeroService } from '../../services/hero.service';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-   /* hero: IHero = {
-    id: 1,
-    name: 'Windstorm'
-  };
-  */
+  hero: IHero = {} as IHero;
+  
   heroes: IHero[] = [];
   
- // this.heroes = this.heroService.getHeroes();
-
   constructor(private heroService: HeroService) { }
 
   ngOnInit(): void {
     this.getHeroes();
   }
 
-
-  
   getHeroes(): void {
     this.heroService.getHeroes()
      .subscribe(heroes => this.heroes = heroes);
@@ -38,6 +32,11 @@ export class HeroesComponent implements OnInit {
       .subscribe(hero => {
         this.heroes.push(hero);
       });
+  }
+  
+  onClickAdd(name: string): void {
+    this.onClickAdd(name);
+    this.hero.name="";
   }
 
   delete(hero: IHero): void {

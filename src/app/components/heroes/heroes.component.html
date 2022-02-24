@@ -1,23 +1,26 @@
-<!--<h2>{{hero.name | uppercase}} Details</h2>
-<div><span>name: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
+<div class="container">
+  <div [hidden]="myForm">
+    <h2>My Heroes</h2>
 
-<div> 
-    <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+    <form  #myForm="ngForm">
+      <div class ="form-group">
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero"  class="form-control" required [(ngModel)]="hero.name">
+        <div [hidden]="myForm.valid || myForm.pristine"
+          class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+
+      <button type="button" class="add-button" (onClick)="onClickAdd(hero.name)">
+        Add hero
+      </button>
+    </form>
+  </div>
 </div>
--->
 
-<h2>My Heroes</h2>
 
-<div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
-
-  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
-    Add hero
-  </button>
-</div>
 
 <div class="list">
   <ul class="list_heroes">
@@ -31,20 +34,9 @@
   </ul>
 </div>
 
+
+
 <hr>
 
 
 
-
-<!-- <div *ngIf="selectedHero">
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div>id: {{selectedHero.id}}</div>
-
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-  </div>
-
-</div>
--->
-<!--<app-hero-detail [hero]="selectedHero"></app-hero-detail>-->
