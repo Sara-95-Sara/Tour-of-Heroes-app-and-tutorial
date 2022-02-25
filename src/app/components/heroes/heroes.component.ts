@@ -35,7 +35,7 @@ export class HeroesComponent implements OnInit {
   }
   
   onClickAdd(name: string): void {
-    this.onClickAdd(name);
+    this.add(name);
     this.hero.name="";
   }
 
