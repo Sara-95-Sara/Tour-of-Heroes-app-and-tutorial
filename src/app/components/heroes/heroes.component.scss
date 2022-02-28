@@ -27,7 +27,6 @@ div {
         display: flex;
       }
 
-
       button {
         flex: 1;
         cursor: pointer;
@@ -94,7 +93,9 @@ div {
     border-left: 5px solid #a94442; /* red */
   }
 
-  
+  .btn btn-outline-secondary me-2 {
+    background-color: #42A948;
+  }
   
   
   

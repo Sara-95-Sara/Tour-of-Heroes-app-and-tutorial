@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { IHero } from '../interfaces/i-hero';
 import { HEROES } from '../mock-heroes';
 import { Observable, of } from 'rxjs';
@@ -10,6 +10,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HeroService {
+
+  $modal = new EventEmitter<any>();
 
   private heroesUrl = 'api/heroes';  // URL to web api
 
