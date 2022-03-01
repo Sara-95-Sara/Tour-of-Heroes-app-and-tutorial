@@ -1,16 +1,30 @@
 
   <h2>My Heroes</h2>
 
-  <button (click)="openModal()" type="button" class="btn btn-outline-secondary me-2" placement="bottom"
-    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on bottom">
-    Add Hero
-  </button>
-  
-  <div class="" *ngIf="modalSwitch == true">
-    <app-addheroe></app-addheroe>
-  </div>
+  <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Hero"></p-button>
+  <p-dialog header="Header" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+    [draggable]="false" [resizable]="false">
+    <div class="container">
+      <form  #heroForm="ngForm">
+        <div class ="form-group">
+          <label for="heroName">
+            Hero name: 
+          </label>
+          <input id="heroName"  type="text" class="form-control"  required [(ngModel)]="hero.name" name="heroName"  #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+            class="alert alert-danger">
+            Name is required
+          </div>
+        </div>
+    
+        <button type="button" class="add-button" (click)="onClickAdd(hero.name)">
+          Add hero
+        </button>
+      </form>
+    </div>
+  </p-dialog>
 
-  
+
 <div class="list">
   <ul class="list_heroes">
     <li *ngFor="let hero of heroes">
@@ -22,7 +36,6 @@
     </li>
   </ul>
 </div>
-
 
 
 <hr>

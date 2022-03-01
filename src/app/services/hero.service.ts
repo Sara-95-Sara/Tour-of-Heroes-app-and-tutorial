@@ -11,7 +11,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HeroService {
 
-  $modal = new EventEmitter<any>();
 
   private heroesUrl = 'api/heroes';  // URL to web api
 

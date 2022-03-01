@@ -12,7 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
-import { AddheroeComponent } from './addheroe/addheroe.component';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -22,13 +26,16 @@ import { AddheroeComponent } from './addheroe/addheroe.component';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    AddheroeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule,
+
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
