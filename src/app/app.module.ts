@@ -15,6 +15,8 @@ import { HeroSearchComponent } from './components/hero-search/hero-search.compon
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableModule } from 'primeng/table';
+
 
 
 
@@ -35,6 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DialogModule,
     ButtonModule,
     BrowserAnimationsModule,
+    TableModule,
+   
 
 
     HttpClientInMemoryWebApiModule.forRoot(

@@ -4,6 +4,7 @@ import {IHero} from  '../../interfaces/i-hero';
 import { HeroService } from '../../services/hero.service';
 
 
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -26,7 +27,6 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
     this.getHeroes();
     this.primengConfig.ripple = true;
-
   }
 
   showModalDialog() {

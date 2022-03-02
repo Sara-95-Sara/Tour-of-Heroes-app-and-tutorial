@@ -24,7 +24,7 @@ export class HeroService {
     private messageService: MessageService) { }
 
 
-  
+
 
   /** GET heroes from the server */
   getHeroes(): Observable<IHero[]> {
