@@ -26,18 +26,24 @@
 
 <p-toast></p-toast>
 <div class="card">
-  <h5>Single</h5>
+  <h5>Checkbox Selection</h5>
   <p-table [value]="heroes" 
-    selectionMode="single" [(selection)]="selectedIHero1" dataKey="id">
+     [(selection)]="selectedIHeroes" dataKey="id">
     <ng-template pTemplate="header">
       <tr>
+        <th style="width: 3rem">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
         <th>Id</th>
         <th>Name</th>
         <th>Delete</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-hero>
-      <tr [pSelectableRow]="hero">
+      <tr>
+        <td>
+          <p-tableCheckbox [value]="hero"></p-tableCheckbox>
+        </td>
         <td>
           <a routerLink="/detail/{{hero.id}}">
             <span>{{hero.id}}</span>
