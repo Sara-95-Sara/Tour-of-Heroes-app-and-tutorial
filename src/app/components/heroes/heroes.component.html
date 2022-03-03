@@ -26,11 +26,13 @@
 
 
 <div class="card">
-  <p-table [value]="heroes">
+  <h5>Implicit Pagination</h5>
+  <p-table [value]="heroes" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
     <ng-template pTemplate="header">
       <tr>
-        <th pSortableColumn="id">Id <p-sortIcon field="id"></p-sortIcon></th>
-        <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+        <th>Id</th>
+        <th>Name</th>
         <th>Delete</th>
       </tr>
     </ng-template>
@@ -51,6 +53,12 @@
             (click)="delete(hero)">x</button>
         </td>
       </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+      <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+      <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
     </ng-template>
   </p-table>
 </div>

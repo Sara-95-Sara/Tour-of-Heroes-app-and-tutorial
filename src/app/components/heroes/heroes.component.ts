@@ -18,7 +18,11 @@ export class HeroesComponent implements OnInit {
   hero: IHero = {} as IHero;
   
   heroes: IHero[] = [];
-  
+
+  first = 0;
+
+  rows = 10;
+
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
@@ -55,6 +59,26 @@ export class HeroesComponent implements OnInit {
   delete(hero: IHero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero.id).subscribe();
+  }
+
+  next() {
+    this.first = this.first + this.rows;
+  }
+
+  prev() {
+    this.first = this.first - this.rows;
+  }
+
+  reset() {
+    this.first = 0;
+  }
+
+  isLastPage(): boolean {
+    return this.heroes ? this.first === (this.heroes.length - this.rows): true;
+  }
+
+  isFirstPage(): boolean {
+    return this.heroes ? this.first === 0 : true;
   }
 
   
