@@ -16,6 +16,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableModule } from 'primeng/table';
+import { ToastModule} from 'primeng/toast';
 
 
 
@@ -38,6 +39,7 @@ import { TableModule } from 'primeng/table';
     ButtonModule,
     BrowserAnimationsModule,
     TableModule,
+    ToastModule,
    
 
 

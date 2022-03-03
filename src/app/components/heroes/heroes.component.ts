@@ -1,13 +1,16 @@
+import { IHero } from './../../interfaces/i-hero';
+//import { MessageService } from './../../services/message.service';
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import {IHero} from  '../../interfaces/i-hero';
 import { HeroService } from '../../services/hero.service';
+import { MessageService } from 'primeng/api';
 
 
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
+  providers: [MessageService],
   styleUrls: ['./heroes.component.scss',]
 })
 export class HeroesComponent implements OnInit {
@@ -19,13 +22,12 @@ export class HeroesComponent implements OnInit {
   
   heroes: IHero[] = [];
 
-  first = 0;
-
-  rows = 10;
+  selectedIHero1: IHero;
 
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
+    private messageService: MessageService
     ) { }
 
   ngOnInit(): void {
@@ -41,6 +43,9 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
      .subscribe(heroes => this.heroes = heroes);
   }
+
+ 
+   
 
   add(name: string): void {
     name = name.trim();
@@ -61,26 +66,4 @@ export class HeroesComponent implements OnInit {
     this.heroService.deleteHero(hero.id).subscribe();
   }
 
-  next() {
-    this.first = this.first + this.rows;
-  }
-
-  prev() {
-    this.first = this.first - this.rows;
-  }
-
-  reset() {
-    this.first = 0;
-  }
-
-  isLastPage(): boolean {
-    return this.heroes ? this.first === (this.heroes.length - this.rows): true;
-  }
-
-  isFirstPage(): boolean {
-    return this.heroes ? this.first === 0 : true;
-  }
-
-  
-  
 }
