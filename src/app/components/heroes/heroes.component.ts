@@ -22,7 +22,7 @@ export class HeroesComponent implements OnInit {
   
   heroes: IHero[] = [];
 
-  selectedIHero1: IHero;
+  selectedIHeroes: IHero[];
 
   constructor(
     private heroService: HeroService,
