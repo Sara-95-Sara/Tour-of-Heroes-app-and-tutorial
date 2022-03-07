@@ -19,6 +19,7 @@ export class HeroesComponent implements OnInit {
   hero: IHero = {} as IHero;
   
   heroes: IHero[] = [];
+  selectedIHeroes: IHero[];
 
   selectedHero: IHero;
 

@@ -24,13 +24,11 @@
     </div>
   </p-dialog>
 
-
-
   
   
  
    
-    <p-dropdown [options]="heroes" [(ngModel)]="selectedHero" optionLabel="id" [showClear]="true" placeholder="Select a Hero">
+   <p-dropdown [options]="heroes" [(ngModel)]="selectedHero" optionLabel="id" [showClear]="true" placeholder="Select a Hero">
       <ng-template pTemplate="selectedItem">
         <div *ngIf="selectedHero">
           <div>
