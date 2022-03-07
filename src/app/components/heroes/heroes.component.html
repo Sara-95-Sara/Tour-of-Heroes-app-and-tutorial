@@ -25,10 +25,32 @@
   </p-dialog>
 
 
-  <h5>Basic</h5>
-  <p-multiSelect [options]="heroes" [(ngModel)]="selectedIHeroes" defaultLabel="Select a Hero" optionLabel="name">
-  </p-multiSelect>
+
    
+<p-multiSelect  [options]="heroes" [(ngModel)]="selectedIHeroes"  defaultLabel="Select a Hero" optionLabel="name" class="multiselect-custom">
+  <ng-template pTemplate="header">
+    Header Content
+  </ng-template>
+  <ng-template pTemplate="selectedItems" let-hero>
+    <div class="country-item country-item-value" *ngFor="let option of selectedIHeroes">
+      {{option.id}}
+      {{option.name}} 
+    </div>
+    <div *ngIf="!selectedIHeroes || selectedIHeroes.length === 0" class="hero-placeholder">
+      Select Hero
+    </div>
+  </ng-template>
+  <ng-template let-hero pTemplate="item">
+    <div>
+      {{hero.name}}
+      {{hero.id}}
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    Footer Content
+  </ng-template>
+</p-multiSelect>
+
 
 <hr>
 
