@@ -6,6 +6,7 @@ import { HeroService } from '../../services/hero.service';
 
 
 
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -21,7 +22,7 @@ export class HeroesComponent implements OnInit {
   heroes: IHero[] = [];
   selectedIHeroes: IHero[];
 
-  selectedHero: IHero;
+  
 
 
   constructor(
