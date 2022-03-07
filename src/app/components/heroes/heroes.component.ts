@@ -1,16 +1,14 @@
 import { IHero } from './../../interfaces/i-hero';
-//import { MessageService } from './../../services/message.service';
+import { MessageService } from './../../services/message.service';
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HeroService } from '../../services/hero.service';
-import { MessageService } from 'primeng/api';
 
 
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  providers: [MessageService],
   styleUrls: ['./heroes.component.scss',]
 })
 export class HeroesComponent implements OnInit {
@@ -22,12 +20,12 @@ export class HeroesComponent implements OnInit {
   
   heroes: IHero[] = [];
 
-  selectedIHeroes: IHero[];
+  selectedHero: IHero;
+
 
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
-    private messageService: MessageService
     ) { }
 
   ngOnInit(): void {

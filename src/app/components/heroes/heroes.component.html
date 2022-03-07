@@ -24,45 +24,29 @@
     </div>
   </p-dialog>
 
-<p-toast></p-toast>
-<div class="card">
-  <h5>Checkbox Selection</h5>
-  <p-table [value]="heroes" 
-     [(selection)]="selectedIHeroes" dataKey="id">
-    <ng-template pTemplate="header">
-      <tr>
-        <th style="width: 3rem">
-          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-        </th>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Delete</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-hero>
-      <tr>
-        <td>
-          <p-tableCheckbox [value]="hero"></p-tableCheckbox>
-        </td>
-        <td>
-          <a routerLink="/detail/{{hero.id}}">
-            <span>{{hero.id}}</span>
-          </a>
-        </td>    
-        <td>
-          <a routerLink="/detail/{{hero.id}}">
-            {{hero.name}}
-          </a>
-        </td>
-        <td>
-          <button type="button" title="delete hero"
-            (click)="delete(hero)">x</button>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-</div>
 
+
+  
+  
+ 
+   
+    <p-dropdown [options]="heroes" [(ngModel)]="selectedHero" optionLabel="id" [showClear]="true" placeholder="Select a Hero">
+      <ng-template pTemplate="selectedItem">
+        <div *ngIf="selectedHero">
+          <div>
+            {{selectedHero.id}}
+            {{selectedHero.name}}
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="item" let-hero>
+          <div>
+            {{hero.id}}
+            {{hero.name}} 
+          </div>
+      </ng-template>
+    </p-dropdown>
+    
 <hr>
 
 
