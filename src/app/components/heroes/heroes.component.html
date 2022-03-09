@@ -27,35 +27,23 @@
 
 
    
-<p-multiSelect  [options]="heroes" [(ngModel)]="selectedIHeroes"  defaultLabel="Select a Hero" optionLabel="name" class="multiselect-custom">
-  <ng-template pTemplate="header">
-    <div class="hero-header">
-      Header Content
-    </div>
-  </ng-template>
-  <ng-template pTemplate="selectedItems" let-hero>
-    <div class="hero-item hero-item-value" *ngFor="let option of selectedIHeroes">
-      {{option.id}}
-      {{option.name}} 
-    </div>
-    <div *ngIf="!selectedIHeroes || selectedIHeroes.length === 0" class="hero-placeholder">
-      Select Hero
-    </div>
-  </ng-template>
-  <ng-template let-hero pTemplate="item">
-    <div class="hero-item">
-      <div>
-        {{hero.name}}
-        {{hero.id}}
+  <p-dropdown [options]="heroes" [(ngModel)]="selectedHero" optionLabel="id" [showClear]="true" placeholder="Select a Hero">
+    <ng-template pTemplate="selectedItem">
+      <div *ngIf="selectedHero">
+        <div>
+          {{selectedHero.id}}
+          {{selectedHero.name}}
+        </div>
       </div>
-    </div>
-  </ng-template>
-  <ng-template pTemplate="footer">
-    <div class="hero-footer">
-    Footer Content
-    </div>
-  </ng-template>
-</p-multiSelect>
+    </ng-template>
+    <ng-template pTemplate="item" let-hero>
+        <div>
+          {{hero.id}}
+          {{hero.name}} 
+        </div>
+    </ng-template>
+  </p-dropdown>
+  
 
 
 <hr>
