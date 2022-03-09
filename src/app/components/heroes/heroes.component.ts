@@ -1,6 +1,6 @@
 import { IHero } from './../../interfaces/i-hero';
 import { MessageService } from './../../services/message.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HeroService } from '../../services/hero.service';
 
@@ -10,7 +10,8 @@ import { HeroService } from '../../services/hero.service';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss',]
+  styleUrls: ['./heroes.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HeroesComponent implements OnInit {
 
