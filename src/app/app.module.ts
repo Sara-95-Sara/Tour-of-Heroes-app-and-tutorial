@@ -19,6 +19,7 @@ import { TableModule } from 'primeng/table';
 import { ToastModule} from 'primeng/toast';
 import {DropdownModule} from 'primeng/dropdown';
 import {MultiSelectModule} from 'primeng/multiselect';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 
 
@@ -44,6 +45,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
     ToastModule,
     DropdownModule,
     MultiSelectModule,
+    SelectButtonModule,
    
 
 

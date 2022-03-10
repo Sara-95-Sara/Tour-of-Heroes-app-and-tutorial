@@ -4,9 +4,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HeroService } from '../../services/hero.service';
 
-
-
-
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -21,15 +18,20 @@ export class HeroesComponent implements OnInit {
   hero: IHero = {} as IHero;
   
   heroes: IHero[] = [];
+  
   selectedHero: IHero;
-
+  value: any;
+  
   
 
 
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
-    ) { }
+    ){}
+    
+
+    
 
   ngOnInit(): void {
     this.getHeroes();
