@@ -24,10 +24,11 @@
     </div>
   </p-dialog>
 
-
-  <p-selectButton [options]="heroes" [(ngModel)]="selectedHero" optionLabel="name" [multiple]="true">
+  <h5>Single Selection</h5>
+  <p-selectButton [options]="heroes" [(ngModel)]="selectedHero" optionLabel="name"  optionDisabled="inactive">
   </p-selectButton>
 
+  
 <hr>
 
 
