@@ -20,6 +20,8 @@ import { ToastModule} from 'primeng/toast';
 import {DropdownModule} from 'primeng/dropdown';
 import {MultiSelectModule} from 'primeng/multiselect';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { TablesortComponent } from './tablesort/tablesort.component';
 
 
 
@@ -32,6 +34,8 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
+    DropdownComponent,
+    TablesortComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 import { IHero } from './../../interfaces/i-hero';
 import { MessageService } from './../../services/message.service';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HeroService } from '../../services/hero.service';
 
@@ -18,20 +18,19 @@ export class HeroesComponent implements OnInit {
   hero: IHero = {} as IHero;
   
   heroes: IHero[] = [];
-  
-  selectedHero: IHero;
-  value: any;
-  
+
+  dropdown: IHero;
+
   
 
 
+ 
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
     ){}
     
 
-    
 
   ngOnInit(): void {
     this.getHeroes();
@@ -68,5 +67,8 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero.id).subscribe();
   }
+
+  
+  
 
 }

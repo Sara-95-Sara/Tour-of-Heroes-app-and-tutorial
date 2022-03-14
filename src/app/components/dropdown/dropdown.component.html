@@ -1,0 +1,17 @@
+
+<p-dropdown [options]="heroes" [(ngModel)]="selectedHero" optionLabel="id" [showClear]="true"  placeholder="Select a Hero" #selecthero>
+    <ng-template pTemplate="selectedItem">
+      <div *ngIf="selectedHero"> <!--(click)="addNewItem(selecthero.value)"  --> 
+        <div>
+          {{selectedHero.id}}
+          {{selectedHero.name}}
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="item" let-hero>
+        <div>
+          {{hero.id}}
+          {{hero.name}} 
+        </div>
+    </ng-template>
+  </p-dropdown>

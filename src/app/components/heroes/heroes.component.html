@@ -1,7 +1,7 @@
 
   <h2>My Heroes</h2>
 
-  <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Hero"></p-button>
+  <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Hero" ></p-button>
   <p-dialog header="Header" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
     [draggable]="false" [resizable]="false">
     <div class="container">
@@ -24,10 +24,41 @@
     </div>
   </p-dialog>
 
-  <h5>Single Selection</h5>
-  <p-selectButton [options]="heroes" [(ngModel)]="selectedHero" optionLabel="name"  optionDisabled="inactive">
-  </p-selectButton>
+ 
+  <div>
+    <p-table [value]="heroes">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Delete</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-hero>
+        <tr>
+          <td>
+            <a routerLink="/detail/{{hero.id}}">
+              <span>{{hero.id}}</span>
+            </a>
+          </td>    
+          <td>
+            <a routerLink="/detail/{{hero.id}}">
+              {{hero.name}}
+            </a>
+          </td>
+          <td>
+            <button type="button" title="delete hero"
+              (click)="delete(hero)">x</button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  
 
+ 
+  <!--<app-dropdown [selectedHero]="dropdown" (newItemEvent)="addItem($event)"></app-dropdown>
+  -->
   
 <hr>
 
