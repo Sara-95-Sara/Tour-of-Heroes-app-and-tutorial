@@ -1,6 +1,7 @@
+import { HEROES } from './../../mock-heroes';
 import { IHero } from './../../interfaces/i-hero';
 import { MessageService } from './../../services/message.service';
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HeroService } from '../../services/hero.service';
 
@@ -20,34 +21,30 @@ export class HeroesComponent implements OnInit {
   heroes: IHero[] = [];
 
   dropdown: IHero;
-
   
-
-
+  
+  addNew(selecthero: IHero) {
+    this.heroes.push(selecthero);
+  }
  
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
     ){}
     
-
-
   ngOnInit(): void {
     this.getHeroes();
     this.primengConfig.ripple = true;
   }
 
   showModalDialog() {
-    this.displayModal = true;
-}
+    this.displayModal = true;  
+  }
 
   getHeroes(): void {
     this.heroService.getHeroes()
      .subscribe(heroes => this.heroes = heroes);
   }
-
- 
-   
 
   add(name: string): void {
     name = name.trim();
@@ -67,8 +64,4 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero.id).subscribe();
   }
-
-  
-  
-
 }

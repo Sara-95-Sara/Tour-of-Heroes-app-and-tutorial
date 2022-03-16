@@ -21,7 +21,8 @@ import {DropdownModule} from 'primeng/dropdown';
 import {MultiSelectModule} from 'primeng/multiselect';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { TablesortComponent } from './tablesort/tablesort.component';
+
+import { TableSortComponent } from './components/table-sort/table-sort.component';
 
 
 
@@ -35,7 +36,7 @@ import { TablesortComponent } from './tablesort/tablesort.component';
     DashboardComponent,
     HeroSearchComponent,
     DropdownComponent,
-    TablesortComponent,
+    TableSortComponent,
   ],
   imports: [
     BrowserModule,

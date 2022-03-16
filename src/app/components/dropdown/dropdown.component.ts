@@ -2,7 +2,6 @@
 import { IHero } from './../../interfaces/i-hero';
 import { Component, OnInit, Input, Output,  EventEmitter, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { HeroService } from '../../services/hero.service';
 
 @Component({
   selector: 'app-dropdown',
@@ -14,37 +13,21 @@ export class DropdownComponent implements OnInit {
 
   hero: IHero = {} as IHero; 
   
-  heroes: IHero[] = [];
+  @Input() heroes: IHero[];
   
-  changes : IHero;
-
   @Input() selectedHero: IHero;
 
-  
-
- // @Output()   = new EventEmitter<IHero>();
+  @Output() selectedHeroChange= new EventEmitter<IHero>();
    
-
- /* addNewItem(value: IHero) {
-    this.newItemEvent.emit(value);
+  addNewItem(){
+    this.selectedHeroChange.emit(this.selectedHero);
   }
- */ 
+ 
   constructor(
-    private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
   ) {}
  
-  
-
-  ngOnInit(): void {
-    this.getHeroes();
+  ngOnInit(): void {;
     this.primengConfig.ripple = true;
   }
-
-  getHeroes(): void {
-    this.heroService.getHeroes()
-     .subscribe(heroes => this.heroes = heroes);
-     
-  }
-
 }

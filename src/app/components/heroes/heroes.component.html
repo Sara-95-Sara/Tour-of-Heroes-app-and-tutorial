@@ -2,7 +2,7 @@
   <h2>My Heroes</h2>
 
   <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Add Hero" ></p-button>
-  <p-dialog header="Header" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+  <p-dialog  header="Header" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
     [draggable]="false" [resizable]="false">
     <div class="container">
       <form  #heroForm="ngForm">
@@ -16,15 +16,15 @@
             Name is required
           </div>
         </div>
-    
         <button type="button" class="add-button" (click)="onClickAdd(hero.name)">
           Add hero
         </button>
       </form>
     </div>
   </p-dialog>
-
  
+  <app-dropdown [(selectedHero)]="dropdown" [heroes]="heroes" (selectedHeroChange)="addNew($event)"></app-dropdown>
+  
   <div>
     <p-table [value]="heroes">
       <ng-template pTemplate="header">
@@ -56,9 +56,11 @@
   </div>
   
 
+
+
+
  
-  <!--<app-dropdown [selectedHero]="dropdown" (newItemEvent)="addItem($event)"></app-dropdown>
-  -->
+
   
 <hr>
 
