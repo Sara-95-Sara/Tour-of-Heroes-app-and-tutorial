@@ -26,6 +26,7 @@
   <app-dropdown [(selectedHero)]="dropdown" [heroes]="heroes" (selectedHeroChange)="addNew($event)"></app-dropdown>
   
   <div>
+    <h3>Table Basic</h3>
     <p-table [value]="heroes">
       <ng-template pTemplate="header">
         <tr>
@@ -55,7 +56,8 @@
     </p-table>
   </div>
   
-
+  <app-table-sort  [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-table-sort>
+  <!--  [(deleteHero)]="tablesort" -->
 
 
 

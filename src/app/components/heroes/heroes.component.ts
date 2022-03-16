@@ -21,10 +21,16 @@ export class HeroesComponent implements OnInit {
   heroes: IHero[] = [];
 
   dropdown: IHero;
+ // tablesort: IHero[];
   
   
   addNew(selecthero: IHero) {
     this.heroes.push(selecthero);
+  }
+ 
+  delete(hero: IHero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero.id).subscribe();
   }
  
   constructor(
@@ -60,8 +66,5 @@ export class HeroesComponent implements OnInit {
     this.displayModal = false;
   }
 
-  delete(hero: IHero): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero.id).subscribe();
-  }
+  
 }

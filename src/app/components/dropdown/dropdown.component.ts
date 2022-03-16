@@ -12,6 +12,7 @@ import { PrimeNGConfig } from 'primeng/api';
 export class DropdownComponent implements OnInit {
 
   hero: IHero = {} as IHero; 
+
   
   @Input() heroes: IHero[];
   
