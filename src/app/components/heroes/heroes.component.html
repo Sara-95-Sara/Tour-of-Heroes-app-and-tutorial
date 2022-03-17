@@ -57,8 +57,8 @@
   </div>
   
   <app-table-sort  [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-table-sort>
-  <!--  [(deleteHero)]="tablesort" -->
-
+ 
+  <app-tablepage  [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-tablepage>
 
 
  

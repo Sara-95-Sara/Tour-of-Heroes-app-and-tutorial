@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit {
   heroes: IHero[] = [];
 
   dropdown: IHero;
- // tablesort: IHero[];
+  
   
   
   addNew(selecthero: IHero) {

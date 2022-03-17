@@ -23,6 +23,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 import { TableSortComponent } from './components/table-sort/table-sort.component';
+import { TablepageComponent } from './components/tablepage/tablepage.component';
 
 
 
@@ -37,6 +38,7 @@ import { TableSortComponent } from './components/table-sort/table-sort.component
     HeroSearchComponent,
     DropdownComponent,
     TableSortComponent,
+    TablepageComponent,
   ],
   imports: [
     BrowserModule,

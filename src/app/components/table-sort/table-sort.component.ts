@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { IHero } from 'src/app/interfaces/i-hero';
-import { HeroService } from 'src/app/services/hero.service';
+
 
 @Component({
   selector: 'app-table-sort',
@@ -14,13 +14,11 @@ export class TableSortComponent implements OnInit {
 
   @Input() heroes: IHero[];
 
-  @Input() deleteHero: IHero[];
 
   @Output() deleteHeroChange= new EventEmitter<IHero>();
 
   
   constructor(
-    private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
   ) { }
 
@@ -30,7 +28,6 @@ export class TableSortComponent implements OnInit {
   
   delete(hero: IHero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero.id).subscribe();
     this.deleteHeroChange.emit(hero);
   }
 }
