@@ -22,10 +22,15 @@ export class HeroesComponent implements OnInit {
 
   dropdown: IHero;
   
+  selecttable: IHero;
   
   
-  addNew(selecthero: IHero) {
-    this.heroes.push(selecthero);
+  onChange(hero: IHero) {
+    this.heroes.push(hero);
+  }
+
+  addSelect(select: IHero){
+    this.heroes.push(select);
   }
  
   delete(hero: IHero): void {

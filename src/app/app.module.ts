@@ -24,6 +24,9 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 
 import { TableSortComponent } from './components/table-sort/table-sort.component';
 import { TablepageComponent } from './components/tablepage/tablepage.component';
+import { TableSelectionComponent } from './components/table-selection/table-selection.component';
+import { ChechkboxSelectionComponent } from './components/chechkbox-selection/chechkbox-selection.component';
+
 
 
 
@@ -39,6 +42,8 @@ import { TablepageComponent } from './components/tablepage/tablepage.component';
     DropdownComponent,
     TableSortComponent,
     TablepageComponent,
+    TableSelectionComponent,
+    ChechkboxSelectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,7 @@ import { TablepageComponent } from './components/tablepage/tablepage.component';
     DropdownModule,
     MultiSelectModule,
     SelectButtonModule,
+    ToastModule,
    
 
 

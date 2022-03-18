@@ -23,7 +23,7 @@
     </div>
   </p-dialog>
  
-  <app-dropdown [(selectedHero)]="dropdown" [heroes]="heroes" (selectedHeroChange)="addNew($event)"></app-dropdown>
+  <app-dropdown [(selectedHero)]="dropdown" [heroes]="heroes" (selectedHeroChange)="onChange($event)"></app-dropdown>
   
   <div>
     <h3>Table Basic</h3>
@@ -59,6 +59,9 @@
   <app-table-sort  [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-table-sort>
  
   <app-tablepage  [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-tablepage>
+
+   <app-table-selection [(selectedIHero1)]="selecttable"  [heroes]="heroes" (selectedIHero1Change)="addSelect($event)"></app-table-selection>
+--
 
 
  
