@@ -1,8 +1,9 @@
-<p-toast></p-toast>
+<p-toast position="top-left" [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}" [showTransformOptions]="'translateX(100%)'"></p-toast>
+
 <div class="card">
-  <h5>Single</h5>
+  <h3>Single Selection</h3>
   <p-table [value]="heroes" 
-    selectionMode="single" [(selection)]="selectedIHero1"  (onRowSelect)="onChangeSelect($event)" dataKey="id"  >
+    selectionMode="single" [(selection)]="selectedIHero1"   dataKey="id"  (onRowSelect)="showInfo($event)">
     <ng-template pTemplate="header">
       <tr>
         <th>Id</th>
@@ -23,8 +24,7 @@
           </a>
         </td>
         <td>
-          <button type="button" title="delete hero"
-            (click)="delete(hero)">x</button>
+          <button type="button" title="delete hero" (click)="delete(hero)">x</button>
         </td>
       </tr>
     </ng-template>

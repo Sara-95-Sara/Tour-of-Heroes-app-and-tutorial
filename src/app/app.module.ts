@@ -25,7 +25,11 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { TableSortComponent } from './components/table-sort/table-sort.component';
 import { TablepageComponent } from './components/tablepage/tablepage.component';
 import { TableSelectionComponent } from './components/table-selection/table-selection.component';
-import { ChechkboxSelectionComponent } from './components/chechkbox-selection/chechkbox-selection.component';
+import { CheckboxSelectionComponent } from './components/checkbox-selection/checkbox-selection.component';
+import { MultiSelectBasicComponent } from './components/multi-select-basic/multi-select-basic.component';
+import { MultiSelectTemplatingComponent } from './components/multi-select-templating/multi-select-templating.component';
+import { SelectButtonMultipleComponent } from './components/select-button-multiple/select-button-multiple.component';
+import { SelectButtonSingleComponent } from './components/select-button-single/select-button-single.component';
 
 
 
@@ -43,7 +47,11 @@ import { ChechkboxSelectionComponent } from './components/chechkbox-selection/ch
     TableSortComponent,
     TablepageComponent,
     TableSelectionComponent,
-    ChechkboxSelectionComponent,
+    CheckboxSelectionComponent,
+    MultiSelectBasicComponent,
+    MultiSelectTemplatingComponent,
+    SelectButtonMultipleComponent,
+    SelectButtonSingleComponent,
   ],
   imports: [
     BrowserModule,

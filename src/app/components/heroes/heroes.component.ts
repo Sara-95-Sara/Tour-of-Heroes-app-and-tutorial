@@ -13,7 +13,6 @@ import { HeroService } from '../../services/hero.service';
 })
 export class HeroesComponent implements OnInit {
 
-
   displayModal: boolean = false;
 
   hero: IHero = {} as IHero;
@@ -23,7 +22,6 @@ export class HeroesComponent implements OnInit {
   dropdown: IHero;
   
   selecttable: IHero;
-  
   
   onChange(hero: IHero) {
     this.heroes.push(hero);

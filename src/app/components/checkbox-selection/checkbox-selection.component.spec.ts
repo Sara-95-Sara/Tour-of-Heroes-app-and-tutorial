@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChechkboxSelectionComponent } from './chechkbox-selection.component';
+import { CheckboxSelectionComponent } from './checkbox-selection.component';
 
-describe('ChechkboxSelectionComponent', () => {
-  let component: ChechkboxSelectionComponent;
-  let fixture: ComponentFixture<ChechkboxSelectionComponent>;
+describe('CheckboxSelectionComponent', () => {
+  let component: CheckboxSelectionComponent;
+  let fixture: ComponentFixture<CheckboxSelectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChechkboxSelectionComponent ]
+      declarations: [ CheckboxSelectionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChechkboxSelectionComponent);
+    fixture = TestBed.createComponent(CheckboxSelectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

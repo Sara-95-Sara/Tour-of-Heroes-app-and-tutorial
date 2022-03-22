@@ -1,8 +1,10 @@
-<!-- <p-toast></p-toast>
+<p-toast position="center"  [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}" [showTransformOptions]="'translateX(100%)'"></p-toast>
+
+
 <div class="card">
-  <h5>Checkbox Selection</h5>
+  <h3>Checkbox Selection</h3>
   <p-table [value]="heroes" 
-     [(selection)]="selectedIHeroes" dataKey="id">
+     [(selection)]="selectedIHeroes" dataKey="id" (onRowSelect)="showSuccess($event)">
     <ng-template pTemplate="header">
       <tr>
         <th style="width: 3rem">
@@ -36,4 +38,3 @@
     </ng-template>
   </p-table>
 </div>
--->

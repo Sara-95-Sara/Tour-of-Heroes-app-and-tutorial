@@ -60,9 +60,17 @@
  
   <app-tablepage  [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-tablepage>
 
-   <app-table-selection [(selectedIHero1)]="selecttable"  [heroes]="heroes" (selectedIHero1Change)="addSelect($event)"></app-table-selection>
---
+  <app-table-selection   [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-table-selection>
 
+  <app-checkbox-selection [heroes]="heroes" (deleteHeroChange)="delete($event)"></app-checkbox-selection>
+
+  <app-multi-select-basic [heroes]="heroes"></app-multi-select-basic>
+
+  <app-multi-select-templating [heroes]="heroes"></app-multi-select-templating>
+
+  <app-select-button-single [heroes]="heroes"></app-select-button-single>
+
+  <app-select-button-multiple [heroes]="heroes"></app-select-button-multiple>
 
  
 

@@ -1,0 +1,33 @@
+<hr>
+<h4>MultiSelect Templating</h4>
+<p-multiSelect  [options]="heroes" [(ngModel)]="selectedIHeroes"  defaultLabel="Select a Hero" optionLabel="name" class="multiselect-custom">
+    <ng-template pTemplate="header">
+      <div class="hero-header">
+        Header Content
+      </div>
+    </ng-template>
+    <ng-template pTemplate="selectedItems" let-hero>
+      <div class="hero-item hero-item-value" *ngFor="let option of selectedIHeroes">
+        {{option.id}}
+        {{option.name}} 
+      </div>
+      <div *ngIf="!selectedIHeroes || selectedIHeroes.length === 0" class="hero-placeholder">
+        Select Hero
+      </div>
+    </ng-template>
+    <ng-template let-hero pTemplate="item">
+      <div class="hero-item">
+        <div>
+          {{hero.name}}
+          {{hero.id}}
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div class="hero-footer">
+      Footer Content
+      </div>
+    </ng-template>
+  </p-multiSelect>
+  
+<hr>

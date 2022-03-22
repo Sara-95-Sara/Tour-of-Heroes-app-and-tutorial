@@ -11,22 +11,16 @@ import { MessageService, PrimeNGConfig } from 'primeng/api';
 export class TableSelectionComponent implements OnInit {
 
   hero: IHero = {} as IHero;
-  
 
-  @Input() selectedIHero1: IHero;
-  
+  selectedIHero1: IHero;
+
+  detail?: string | undefined
+
   @Input() heroes: IHero[];
 
-  @Output() selectedIHero1Change= new EventEmitter<IHero>();
+  @Output() deleteHeroChange= new EventEmitter<IHero>();
 
- /* addNewSelect(value: IHero){
-    this.selectedIHero1Change.emit(value);
-  }
-  */
-  onChangeSelect(event: any){
-    this.selectedIHero1Change.emit(event.value);
-  }
-  
+
   constructor(
     private messageService: MessageService,
     private primengConfig: PrimeNGConfig,
@@ -35,10 +29,14 @@ export class TableSelectionComponent implements OnInit {
   ngOnInit(): void {
     this.primengConfig.ripple = true;
   }
+ 
+
+  showInfo(event: any) {
+    this.messageService.add({severity:'info', summary: 'info about selected hero', detail: `${(event.data.id)}. ${(event.data.name)}` });
+  }
 
   delete(hero: IHero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
-    this.selectedIHero1Change.emit(hero)
+    this.deleteHeroChange.emit(hero)
   }
-
 }
