@@ -1,4 +1,3 @@
-import { HEROES } from './../../mock-heroes';
 import { IHero } from './../../interfaces/i-hero';
 import { MessageService } from './../../services/message.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';

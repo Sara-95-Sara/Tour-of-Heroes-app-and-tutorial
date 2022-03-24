@@ -30,6 +30,7 @@ import { MultiSelectBasicComponent } from './components/multi-select-basic/multi
 import { MultiSelectTemplatingComponent } from './components/multi-select-templating/multi-select-templating.component';
 import { SelectButtonMultipleComponent } from './components/select-button-multiple/select-button-multiple.component';
 import { SelectButtonSingleComponent } from './components/select-button-single/select-button-single.component';
+import { PeopleListComponent } from './people-list/people-list.component';
 
 
 
@@ -52,6 +53,7 @@ import { SelectButtonSingleComponent } from './components/select-button-single/s
     MultiSelectTemplatingComponent,
     SelectButtonMultipleComponent,
     SelectButtonSingleComponent,
+    PeopleListComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,7 @@ import { SelectButtonSingleComponent } from './components/select-button-single/s
 
 
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
+      InMemoryDataService, { dataEncapsulation: false },
     )
   ],
   providers: [],
