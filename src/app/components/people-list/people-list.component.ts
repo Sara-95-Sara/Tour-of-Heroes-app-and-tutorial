@@ -1,12 +1,13 @@
-import { Person } from './../interfaces/person';
-import { Component, OnInit } from '@angular/core';
+import { Person } from '../../interfaces/person';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { PersonService } from '../services/person.service';
+import { PersonService } from '../../services/person.service';
 
 @Component({
   selector: 'app-people-list',
   templateUrl: './people-list.component.html',
-  styleUrls: ['./people-list.component.scss']
+  styleUrls: ['./people-list.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PeopleListComponent implements OnInit {
   person: Person = {} as Person;
@@ -18,7 +19,7 @@ export class PeopleListComponent implements OnInit {
   constructor(
     private personService: PersonService,
     private primengConfig: PrimeNGConfig,
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getPeople();
@@ -27,8 +28,19 @@ export class PeopleListComponent implements OnInit {
 
   getPeople(): void {
     this.personService.getPeople()
-    .subscribe(people => this.people = people);
-  } 
+      .subscribe(people => {
+        this.people = people;
+        localStorage.setItem('people', JSON.stringify(this.people));
+      })
+  }
+
+} 
+
   
 
-}
+ 
+  
+    
+  
+
+

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
-import { PeopleListComponent } from './people-list/people-list.component';
+import { PeopleListComponent } from './components/people-list/people-list.component';
 
 
 

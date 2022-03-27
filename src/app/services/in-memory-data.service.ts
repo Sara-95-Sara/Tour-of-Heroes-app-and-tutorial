@@ -51,11 +51,11 @@ export class InMemoryDataService implements InMemoryDbService {
         gender: 'Female',
         birthDate: '21.08.1993',
         nif: '77894875E',
-        lenguage: 'spanish',
+        lenguage: 'ingles',
         creationDate: '02.03.19',
       }
     ];
-
+    
     return {heroes, people};
   }
 

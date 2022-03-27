@@ -1,0 +1,28 @@
+<p-table [value]="people">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Surname1</th>
+      <th>Surname2</th>
+      <th>Gender</th>
+      <th>BirthDate</th>
+      <th>NIF</th>
+      <th>Lenguage</th>
+      <th>CreationDate</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-person>
+    <tr>
+      <td>{{person.id}}</td>
+      <td>{{person.name}}</td>
+      <td>{{person.surname1}}</td>
+      <td>{{person.surname2}}</td>
+      <td>{{person.gender}}</td>
+      <td>{{person.birthDate}}</td>
+      <td>{{person.nif}}</td>
+      <td>{{person.lenguage}}</td>
+      <td>{{person.creationDate}}</td>
+    </tr>
+  </ng-template>
+</p-table>
