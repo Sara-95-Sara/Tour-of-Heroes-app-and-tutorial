@@ -25,18 +25,29 @@ export class PersonService {
     ) { }
 
  
-    getPeople(): Observable<Person[]> {
-      const people = localStorage.getItem('people');
-      if (people) {
-        return of(JSON.parse(people) as Person[]);
-      }
+  getPeople(): Observable<Person[]> {
+    const people = localStorage.getItem('people');
+    if (people) {
+      return of(JSON.parse(people) as Person[]);
+    }
      
       return this.http.get<Person[]>(this.peopleUrl)
+        .pipe(
+          tap(_ => this.log('fetched people')),
+          catchError(this.handleError<Person[]>('getPeople', []))
+        );
+      }
+
+
+  createPerson(person: Person): Observable<Person> {
+    return this.http.post<Person>(this.peopleUrl, person, this.httpOptions) 
       .pipe(
-        tap(_ => this.log('fetched people')),
-        catchError(this.handleError<Person[]>('getPeople', []))
+        tap((newPerson: Person) => this.log(`added person  id=${newPerson.id}`)),
+        catchError(this.handleError<Person>('addPerson'))
       );
-    }
+  }
+
+
 
      /**
    * Handle Http operation that failed.

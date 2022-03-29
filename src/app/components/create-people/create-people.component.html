@@ -1,0 +1,97 @@
+<div class="container" [hidden]="submitted">
+  <h2>Create new person</h2>
+  <form (ngSubmit)="onSubmit()" #personForm="ngForm" autocomplete="off">
+    <div class ="form-group">
+      <label for="personName">
+        Name: 
+      </label>
+      <input id="personName"  type="text" class="form-control"  required [(ngModel)]="person.name" name="personName"  #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+        class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+    <div class ="form-group">
+      <label for="personSurname1">
+        Surname 1: 
+      </label>
+      <input id="personSurname1"  type="text" class="form-control"  required [(ngModel)]="person.surname1" name="personSurname1"  #surname1="ngModel">
+      <div [hidden]="surname1.valid || surname1.pristine"
+        class="alert alert-danger">
+        Surname 1 is required
+      </div>
+    </div>
+    
+    <div class ="form-group">
+      <label for="personSurname2">
+        Surname 2: 
+      </label>
+      <input id="personSurname2"  type="text" class="form-control"   [(ngModel)]="person.surname2" name="personSurname2"  #surname2="ngModel">
+      <div [hidden]="surname2.valid || surname2.pristine"
+        class="alert alert-danger">
+        Surname2 is optional 
+      </div>
+    </div>
+
+    <div class ="form-group">
+      <label for="personGender">
+        Gender: 
+      </label>
+      <input id="personGender"  type="text" class="form-control"  required [(ngModel)]="person.gender" name="personGender"  #gender="ngModel">
+      <div [hidden]="gender.valid || gender.pristine"
+        class="alert alert-danger">
+        NIF is required
+      </div>
+    </div>
+
+    <div class ="form-group">
+      <label for="personbirthDate">
+        BirthDate:
+      </label>
+      <input id="personbirthDate"  type="text" class="form-control"  required [(ngModel)]="person.birthDate" name="personbirthDate"  #birthDate="ngModel">
+      <div [hidden]="birthDate.valid || birthDate.pristine"
+        class="alert alert-danger">
+        BirthDate is required
+      </div>
+    </div>
+
+    <div class ="form-group">
+      <label for="personNIF">
+        NIF: 
+      </label>
+      <input id="personNIF"  type="text" class="form-control"  required [(ngModel)]="person.nif" name="personNIF"  #nif="ngModel">
+      <div [hidden]="nif.valid || nif.pristine"
+        class="alert alert-danger">
+        NIF is required
+      </div>
+    </div>  
+
+    <div class ="form-group"> 
+      <label for="personLenguage">
+        Lenguage: 
+      </label>
+      <input id="personLenguage"  type="text" class="form-control"  required [(ngModel)]="person.lenguage" name="personLenguage"  #lenguage="ngModel">
+      <div [hidden]="lenguage.valid || lenguage.pristine"
+        class="alert alert-danger">
+        Lenguage is required
+      </div>
+    </div>
+
+    <div class ="form-group">
+      <label for="CreationDate">
+        Creation Date:
+      </label>
+      <input id="CreationDate"  type="text" class="form-control"  required [(ngModel)]="person.creationDate" name="CreationDate"  #creationDate="ngModel">
+      <div [hidden]="creationDate.valid || creationDate.pristine"
+        class="alert alert-danger">
+        Date is required
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-success" [disabled]="!personForm.form.valid">
+      Save
+    </button>
+  </form>
+</div>
+  

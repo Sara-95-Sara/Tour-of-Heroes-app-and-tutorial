@@ -1,4 +1,16 @@
 body {
     padding: 6em;
-    margin: 8px;
+    margin: 8px; 
 }
+.new {
+    color: #ffffff;
+    background: #6366F1;
+    border: 1px solid #6366F1;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
+    margin-left: 1400px;
+    margin-bottom: 20px;
+}
+    

@@ -18,7 +18,7 @@ export class DropdownComponent implements OnInit {
   
   @Input() selectedHero: IHero;
 
-  @Output() selectedHeroChange= new EventEmitter<IHero>();
+  @Output() selectedHeroChange = new EventEmitter<IHero>();
    
   onChange(event: any){
     this.selectedHeroChange.emit(event.value);

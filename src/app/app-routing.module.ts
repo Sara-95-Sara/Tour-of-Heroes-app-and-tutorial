@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { PeopleListComponent } from './components/people-list/people-list.component';
+import { CreatePeopleComponent } from './components/create-people/create-people.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'people', component: PeopleListComponent },
+  { path: 'createPeople', component: CreatePeopleComponent }
 ];
 
 @NgModule({

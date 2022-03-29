@@ -31,6 +31,7 @@ import { MultiSelectTemplatingComponent } from './components/multi-select-templa
 import { SelectButtonMultipleComponent } from './components/select-button-multiple/select-button-multiple.component';
 import { SelectButtonSingleComponent } from './components/select-button-single/select-button-single.component';
 import { PeopleListComponent } from './components/people-list/people-list.component';
+import { CreatePeopleComponent } from './components/create-people/create-people.component';
 
 
 
@@ -54,6 +55,7 @@ import { PeopleListComponent } from './components/people-list/people-list.compon
     SelectButtonMultipleComponent,
     SelectButtonSingleComponent,
     PeopleListComponent,
+    CreatePeopleComponent,
   ],
   imports: [
     BrowserModule,

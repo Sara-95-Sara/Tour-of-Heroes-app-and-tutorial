@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { PeopleListComponent } from '../components/people-list/people-list.component';
 import {IHero} from  '../interfaces/i-hero';
 
 @Injectable({
@@ -62,4 +63,5 @@ export class InMemoryDataService implements InMemoryDbService {
   genId(heroes: IHero[]): number {
     return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) +1 : 11;
   }
+  
 }

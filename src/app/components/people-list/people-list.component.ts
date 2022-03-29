@@ -31,7 +31,7 @@ export class PeopleListComponent implements OnInit {
       .subscribe(people => {
         this.people = people;
         localStorage.setItem('people', JSON.stringify(this.people));
-      })
+      });
   }
 
 } 
