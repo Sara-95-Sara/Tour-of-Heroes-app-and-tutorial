@@ -1,0 +1,38 @@
+<div *ngIf="person" class="detail">
+  <h2>{{person.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{person.id}}</div>
+  <div>
+    <label for="person-name">Person name: </label>
+    <input id="person-name" [(ngModel)]="person.name" placeholder="Person name">
+  </div>
+  <div>
+    <label for="person-surname1">Person Surname 1: </label>
+    <input id="person-surname1" [(ngModel)]="person.surname1" placeholder="Person Surname 1">
+  </div>
+  <div>
+    <label for="person-surname2">Person Surname 2: </label>
+    <input id="person-surname2" [(ngModel)]="person.surname2" placeholder="Person Surname 2">
+  </div>
+  <div>
+    <label for="person-gender">Person Gender: </label>
+    <input id="person-gender" [(ngModel)]="person.gender" placeholder="Person Gender">
+  </div>
+  <div>
+    <label for="person-birthDate">Person BirthDate: </label>
+    <input id="person-birthDate" [(ngModel)]="person.birthDate" placeholder="Person BirthDate">
+  </div>
+  <div>
+    <label for="person-nif">Person NIF: </label>
+    <input id="person-nif" [(ngModel)]="person.nif" placeholder="Person NIF">
+  </div>
+  <div>
+    <label for="person-lenguage">Person Lenguage: </label>
+    <input id="person-lenguage" [(ngModel)]="person.lenguage" placeholder="Person Lenguage">
+  </div>
+  <div>
+    <label for="person-creationDate">Person CreationDate: </label>
+    <input id="person-creationDate" [(ngModel)]="person.creationDate" placeholder="Person CreationDate">
+  </div>
+  <button type="button" (click)="goBack()">go back</button>
+  <button type="button" (click)="save()">save</button>
+</div>

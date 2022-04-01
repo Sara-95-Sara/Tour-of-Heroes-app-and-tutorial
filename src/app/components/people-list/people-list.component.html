@@ -5,6 +5,7 @@
 <p-table [value]="people">
   <ng-template pTemplate="header">
     <tr>
+      <th>Edit person</th>
       <th>Id</th>
       <th>Name</th>
       <th>Surname1</th>
@@ -18,6 +19,7 @@
   </ng-template>
   <ng-template pTemplate="body" let-person>
     <tr>
+      <td> <p-button icon="pi pi-external-link"  routerLink="/person-detail/{{person.id}}"></p-button></td>
       <td>{{person.id}}</td>
       <td>{{person.name}}</td>
       <td>{{person.surname1}}</td>

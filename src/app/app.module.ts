@@ -32,6 +32,7 @@ import { SelectButtonMultipleComponent } from './components/select-button-multip
 import { SelectButtonSingleComponent } from './components/select-button-single/select-button-single.component';
 import { PeopleListComponent } from './components/people-list/people-list.component';
 import { CreatePeopleComponent } from './components/create-people/create-people.component';
+import { PersonDetailComponent } from './components/person-detail/person-detail.component';
 
 
 
@@ -56,6 +57,7 @@ import { CreatePeopleComponent } from './components/create-people/create-people.
     SelectButtonSingleComponent,
     PeopleListComponent,
     CreatePeopleComponent,
+    PersonDetailComponent,
   ],
   imports: [
     BrowserModule,

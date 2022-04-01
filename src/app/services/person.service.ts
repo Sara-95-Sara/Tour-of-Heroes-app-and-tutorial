@@ -48,6 +48,25 @@ export class PersonService {
   }
 
 
+  
+  /** GET person by id. Will 404 if id not found */
+  getPerson(id: number): Observable<Person> {
+    const url = `${this.peopleUrl}/${id}`;
+    return this.http.get<Person>(url).pipe(
+      tap(_ => this.log(`fetched person id=${id}`)),
+      catchError(this.handleError<Person>(`getPerson id=${id}`))
+    );
+  }
+
+  /** PUT: update the person on the server */
+  updatePerson(person: Person): Observable<any> {
+    return this.http.put(this.peopleUrl, person, this.httpOptions)
+    .pipe(
+      tap(_ => this.log(`updated person id=${person.id}`)),
+      catchError(this.handleError<any>('updatePerson'))
+    );
+  }
+
 
      /**
    * Handle Http operation that failed.

@@ -16,6 +16,14 @@ export class CreatePeopleComponent implements OnInit {
   submitted = false;
   
 
+  constructor(
+    private personService: PersonService,
+  ) { }
+
+  ngOnInit(): void {
+    this.getPeople();
+  }
+
   onSubmit() { 
     this.person.id = this.genId(this.people);
     this.personService.createPerson(this.person)
@@ -28,14 +36,6 @@ export class CreatePeopleComponent implements OnInit {
 
   genId(people: Person[]): number {
     return people.length > 0 ? Math.max(...people.map(person => person.id)) +1 : 1;
-  }
-
-  constructor(
-    private personService: PersonService,
-  ) { }
-
-  ngOnInit(): void {
-    this.getPeople();
   }
 
   getPeople(): void {
