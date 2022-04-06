@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
@@ -17,11 +16,10 @@ import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableModule } from 'primeng/table';
 import { ToastModule} from 'primeng/toast';
-import {DropdownModule} from 'primeng/dropdown';
-import {MultiSelectModule} from 'primeng/multiselect';
+import { DropdownModule } from 'primeng/dropdown';
+import { MultiSelectModule } from 'primeng/multiselect';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
-
 import { TableSortComponent } from './components/table-sort/table-sort.component';
 import { TablepageComponent } from './components/tablepage/tablepage.component';
 import { TableSelectionComponent } from './components/table-selection/table-selection.component';
@@ -33,8 +31,7 @@ import { SelectButtonSingleComponent } from './components/select-button-single/s
 import { PeopleListComponent } from './components/people-list/people-list.component';
 import { CreatePeopleComponent } from './components/create-people/create-people.component';
 import { PersonDetailComponent } from './components/person-detail/person-detail.component';
-
-
+import { CalculatorComponent } from './components/calculator/calculator.component';
 
 
 
@@ -58,6 +55,7 @@ import { PersonDetailComponent } from './components/person-detail/person-detail.
     PeopleListComponent,
     CreatePeopleComponent,
     PersonDetailComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +72,6 @@ import { PersonDetailComponent } from './components/person-detail/person-detail.
     SelectButtonModule,
     ToastModule,
    
-
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false },

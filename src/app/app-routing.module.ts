@@ -1,4 +1,3 @@
-import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -7,6 +6,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { PeopleListComponent } from './components/people-list/people-list.component';
 import { CreatePeopleComponent } from './components/create-people/create-people.component';
 import { PersonDetailComponent } from './components/person-detail/person-detail.component';
+import { CalculatorComponent } from './components/calculator/calculator.component';
 
 
 
@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'people', component: PeopleListComponent },
   { path: 'createPeople', component: CreatePeopleComponent },
-  { path: 'person-detail/:id', component: PersonDetailComponent }
+  { path: 'person-detail/:id', component: PersonDetailComponent },
+  { path: 'calculator', component: CalculatorComponent }
 ];
 
 @NgModule({

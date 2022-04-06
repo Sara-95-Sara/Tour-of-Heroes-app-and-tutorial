@@ -11,20 +11,17 @@ import { MessageService } from './message.service';
 })
 export class PersonService {
 
-  
   private peopleUrl = 'api/people';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-
   constructor(
     private http: HttpClient,
     private messageService: MessageService,
     ) { }
 
- 
   getPeople(): Observable<Person[]> {
     const people = localStorage.getItem('people');
     if (people) {

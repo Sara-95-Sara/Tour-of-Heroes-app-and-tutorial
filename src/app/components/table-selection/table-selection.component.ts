@@ -30,7 +30,6 @@ export class TableSelectionComponent implements OnInit {
     this.primengConfig.ripple = true;
   }
  
-
   showInfo(event: any) {
     this.messageService.add({severity:'info', summary: 'info about selected hero', detail: `${(event.data.id)}. ${(event.data.name)}` });
   }

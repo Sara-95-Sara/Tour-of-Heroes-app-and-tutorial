@@ -34,10 +34,11 @@ export class PersonDetailComponent implements OnInit {
     if (this.person) {
       this.personService.updatePerson(this.person)
         .subscribe(() => {
-          const id = this.people.findIndex(person =>
-            person.id === this.person.id
-          );
-          this.people[id] = this.person;
+          for(let i = 0; i < this.people.length; i++) {
+            if(this.people[i].id === this.person.id) {
+              this.people[i] = this.person;
+            }
+          } 
           this.goBack();
           localStorage.setItem('people', JSON.stringify(this.people));
         });

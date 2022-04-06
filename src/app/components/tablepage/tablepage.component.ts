@@ -9,9 +9,9 @@ import { IHero } from 'src/app/interfaces/i-hero';
   styleUrls: ['./tablepage.component.scss']
 })
 export class TablepageComponent implements OnInit {
+
   hero: IHero = {} as IHero;
   
- 
   @Input() heroes: IHero[];
 
   @Output() deleteHeroChange= new EventEmitter<IHero>();

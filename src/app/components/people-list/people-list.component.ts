@@ -9,13 +9,13 @@ import { PersonService } from '../../services/person.service';
   styleUrls: ['./people-list.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class PeopleListComponent implements OnInit {
+
   person: Person = {} as Person;
 
   people: Person[] = [];
   
-  
-
   constructor(
     private personService: PersonService,
     private primengConfig: PrimeNGConfig,
