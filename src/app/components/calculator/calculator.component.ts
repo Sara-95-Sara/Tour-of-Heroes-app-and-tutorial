@@ -24,7 +24,7 @@ export class CalculatorComponent {
   constructor() { }
 
   addNumber(numero: number): void { 
-    if(this.delete) {
+   if(this.buffer) {
       this.buffer = 0;
       this.delete = false;
     }
@@ -37,7 +37,7 @@ export class CalculatorComponent {
 
   operate(ope: number): void {
     this.op1 = this.buffer;
-    this.buffer = 0;
+    //this.buffer = 0;
     switch(ope){
       case 1: this.operation = operations.ADD;
       break;

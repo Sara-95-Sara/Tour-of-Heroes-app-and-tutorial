@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { IHero } from '../interfaces/i-hero';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap} from 'rxjs/operators';

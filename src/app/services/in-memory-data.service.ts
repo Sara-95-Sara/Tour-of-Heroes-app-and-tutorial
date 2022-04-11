@@ -5,6 +5,7 @@ import {IHero} from  '../interfaces/i-hero';
 @Injectable({
   providedIn: 'root'
 })
+
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [

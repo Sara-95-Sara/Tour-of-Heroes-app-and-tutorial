@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, TRANSLATIONS } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
@@ -32,6 +32,9 @@ import { PeopleListComponent } from './components/people-list/people-list.compon
 import { CreatePeopleComponent } from './components/create-people/create-people.component';
 import { PersonDetailComponent } from './components/person-detail/person-detail.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 
 
 
@@ -71,13 +74,27 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
     MultiSelectModule,
     SelectButtonModule,
     ToastModule,
+    
    
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false },
-    )
+    ),
+
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
