@@ -76,11 +76,11 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     ToastModule,
     
    
-
+/*
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false },
     ),
-
+*/
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
