@@ -1,14 +1,14 @@
 <p-toast position="top-left" [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}" [showTransformOptions]="'translateX(100%)'"></p-toast>
 
 <div class="card">
-  <h3>Single Selection</h3>
+  <h3>{{ 'singleSelection' | translate }}</h3>
   <p-table [value]="heroes" 
     selectionMode="single" [(selection)]="selectedIHero1"   dataKey="id"  (onRowSelect)="showInfo($event)">
     <ng-template pTemplate="header">
       <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Delete</th>
+        <th>{{ 'id' | translate }}</th>
+        <th>{{ 'name' | translate }}</th>
+        <th>{{ 'delete' | translate }}</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-hero>

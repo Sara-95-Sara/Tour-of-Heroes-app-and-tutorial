@@ -1,5 +1,5 @@
 
 <hr>
-<h4>MultiSelect Basic</h4>
-<p-multiSelect class= "basic" [options]="heroes" [(ngModel)]="selectedIHeroes" defaultLabel="Select a Hero" optionLabel="name">
+<h4>{{ 'multiSelectBasic' | translate }}</h4>
+<p-multiSelect class= "basic" [options]="heroes" [(ngModel)]="selectedIHeroes" defaultLabel="{{ 'selectAHero' | translate }}" optionLabel="name">
 </p-multiSelect>

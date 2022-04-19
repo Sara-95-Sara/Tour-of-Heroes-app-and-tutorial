@@ -1,5 +1,5 @@
 
-<p-dropdown [options]="heroes" [(ngModel)]="selectedHero" (onChange)="onChange($event)" optionLabel="id" [showClear]="true"  placeholder="Select a Hero">
+<p-dropdown [options]="heroes" [(ngModel)]="selectedHero" (onChange)="onChange($event)" optionLabel="id" [showClear]="true"  placeholder="{{ 'selectAHero' | translate }}">
   <ng-template pTemplate="selectedItem">
     <div *ngIf="selectedHero">
       <div>

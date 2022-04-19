@@ -1,20 +1,20 @@
 <button type="button" class="new" routerLink="/createPeople">
-  New
+  {{ 'newPerson' | translate }}
 </button>
 
 <p-table [value]="people">
   <ng-template pTemplate="header">
     <tr>
-      <th>Edit person</th>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Surname1</th>
-      <th>Surname2</th>
-      <th>Gender</th>
-      <th>BirthDate</th>
-      <th>NIF</th>
-      <th>Lenguage</th>
-      <th>CreationDate</th>
+      <th>{{ 'editPerson' | translate }}</th>
+      <th>{{ 'id' | translate }}</th>
+      <th>{{ 'name' | translate }}</th>
+      <th>{{ 'surname1' | translate }}</th>
+      <th>{{ 'surname2' | translate }}</th>
+      <th>{{ 'gender' | translate }}</th>
+      <th>{{ 'birthDate' | translate }}</th>
+      <th>{{ 'nif' | translate }}</th>
+      <th>{{ 'lenguage' | translate }}</th>
+      <th>{{ 'creationDate' | translate }}</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-person>

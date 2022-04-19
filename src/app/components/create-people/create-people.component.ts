@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from 'src/app/interfaces/person';
 import { PersonService } from '../../services/person.service';
+import  { Location } from '@angular/common';
 
 @Component({
   selector: 'app-create-people',
@@ -12,16 +13,19 @@ export class CreatePeopleComponent implements OnInit {
   person: Person = {} as Person;
   
   people: Person[] = [];
-
-  submitted = false;
+ 
   
-
   constructor(
     private personService: PersonService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
     this.getPeople();
+  }
+
+  goBack() : void{
+    this.location.back();
   }
 
   onSubmit() { 
@@ -31,7 +35,7 @@ export class CreatePeopleComponent implements OnInit {
         this.people.push(person);
         localStorage.setItem('people', JSON.stringify(this.people));
       });
-    this.submitted = true
+    this.goBack();
   }
 
   genId(people: Person[]): number {

@@ -4,12 +4,14 @@ import { HeroService } from '../../services/hero.service';
 import { IHero } from '../../interfaces/i-hero';
 import  { Location } from '@angular/common';
 
+
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.scss']
 })
 export class HeroDetailComponent implements OnInit {
+  
   hero: IHero | undefined;
 
 
@@ -36,7 +38,7 @@ export class HeroDetailComponent implements OnInit {
   save(): void {
     if (this.hero) {
       this.heroService.updateHero(this.hero)
-        .subscribe(() => this.goBack());
+        .subscribe(() => this.goBack())
     }
   }
 }

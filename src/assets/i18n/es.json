@@ -1,3 +1,60 @@
 {
-  "HELLO":  "Hola"
+  "app.copmponent.title" : "Recorrido de los héroes",
+  "dashboard": "Panel",
+  "heroes": "Héroes",
+  "people": "Personas",
+  "calculator": "Calculadora",
+
+  "dashboard.title": "Héroes Principales",
+
+  "heroSearch.title": "Búsqueda de Héroes",
+
+  "heroes.title": "Mis Héroes",
+  "addHero": "Añadir Héroe",
+  "header": "Encabezamiento",
+  "heroName": "Nombre de heroe:",
+
+  "selectAHero": "Selecciona un Héroe",
+  "selectHero": "Seleccionar Héroe",
+
+  "tableBasic": "Tabla Basica",
+  "id": "Identificación",
+  "name": "Nombre",
+  "delete": "Eliminar",
+
+  "tableSort": "Clasificación de Tabla",
+
+  "tablePage": "Página de Tabla",
+  "showing": "Mostrando {first} a {last} de {totalRecords} entradas",
+
+  "checkboxSelection": "Checkbox Selección",
+
+  "multiSelectBasic": "Selección múltiple básica",
+
+  "multiSelectTemplating": "Plantilla de Selección Múltiple",
+  "headerContent": "Contenido del Encabezado",
+  "footerContent": "Contenido de pie de página",
+
+  "singleSelection": "Selección Única",
+
+  "multipleSelection": "Selección Múltiple",
+
+  "newPerson": "Nueva Persona",
+  "createNewPerson": "Crear Nueva Persona",
+  "surname1": "Apellido1",
+  "surname2": "Apellido2",
+  "gender": "Género",
+  "birthDate": "Fecha de Nacimiento",
+  "nif": "NIF",
+  "lenguage": "Idioma",
+  "creationDate": "Fecha de Creación",
+  "is required": "es requerido",
+  "is optional": "es opcional",
+  "save": "guardar",
+  "editPerson": "Editar Persona",
+  "details": "Detalles",
+  "go back": "volver",
+
+  "clear": "Quitar"
+ 
 }

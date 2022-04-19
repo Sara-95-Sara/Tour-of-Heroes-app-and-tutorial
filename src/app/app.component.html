@@ -2,13 +2,12 @@
   <button class="translate_button" (click)="useEnglish('en')">English</button>
   <button class="translate_button" (click)="useSpanish('es')">Español</button>
 </div>
-<!-- <h1>{{ 'title' | translate }}</h1> -->
-<h1>{{ 'HELLO' | translate }}</h1>
+<h1>{{ 'app.copmponent.title' | translate }}</h1> 
 <nav> 
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-  <a routerLink="/people">People</a>
-  <a routerLink="/calculator">Calculator</a>
+  <a routerLink="/dashboard">{{ 'dashboard' | translate }}</a>
+  <a routerLink="/heroes">{{ 'heroes' | translate }}</a>
+  <a routerLink="/people">{{ 'people' | translate }}</a>
+  <a routerLink="/calculator">{{ 'calculator' | translate }}</a>
 </nav>
 <hr>
 <router-outlet></router-outlet>

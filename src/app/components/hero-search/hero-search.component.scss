@@ -1,23 +1,25 @@
 /* HeroSearch private styles */
 
+#search-component, #search-result {
+  width: 70%;
+  margin: 50px auto;
+  padding: 10px;
+  overflow: hidden;
+}
 
-label {
-    display: block;
-    color: blue;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 30px;
-    margin-bottom: .5rem;
+  #search-component > label {
+    width: 100%;
     text-align: center;
-    margin-left: 800px;
+    color: blue;
+    font-size: 20px;
   }
-  input {
-    margin-left: 1000px;
-    padding: .5rem;
-    width: 200px;;
-    max-width: 600px;
-    box-sizing: border-box;
+
+  #search-component > input {
     display: block;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 24px;
+
   }
   
   input:focus {

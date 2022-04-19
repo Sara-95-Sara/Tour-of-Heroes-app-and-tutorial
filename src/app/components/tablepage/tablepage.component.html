@@ -1,13 +1,12 @@
 <div class="card">
-  <h3>Table Page</h3>
-  <h5>Implicit Pagination</h5>
+  <h3> {{ 'tablePage' | translate }}</h3>
   <p-table [value]="heroes" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" 
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+    currentPageReportTemplate=" {{ 'showing' | translate }}" [rowsPerPageOptions]="[10,25,50]">
     <ng-template pTemplate="header">
       <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Delete</th>
+        <th>{{ 'id' | translate }}</th>
+        <th>{{ 'name' | translate }}</th>
+        <th>{{ 'delete' | translate }}</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-hero>

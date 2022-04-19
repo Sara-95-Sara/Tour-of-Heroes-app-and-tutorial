@@ -2,7 +2,7 @@
 
 
 <div class="card">
-  <h3>Checkbox Selection</h3>
+  <h3>{{ 'checkboxSelection' | translate }}</h3>
   <p-table [value]="heroes" 
      [(selection)]="selectedIHeroes" dataKey="id" (onRowSelect)="showSuccess($event)">
     <ng-template pTemplate="header">
@@ -10,9 +10,9 @@
         <th style="width: 3rem">
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Delete</th>
+        <th>{{ 'id' | translate }}</th>
+        <th>{{ 'name' | translate }}</th>
+        <th>{{ 'delete' | translate }}</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-hero>

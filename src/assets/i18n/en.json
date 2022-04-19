@@ -1,3 +1,60 @@
 {
-  "HELLO": "Hello"
+  "app.copmponent.title" : "Tour of heroes",
+  "dashboard": "Dashboard",
+  "heroes": "Heroes",
+  "people": "People",
+  "calculator": "Calculator",
+  
+  "dashboard.title": "Top Heroes",
+
+  "heroSearch.title": "Hero Search",
+
+  "heroes.title": "My Heroes",
+  "addHero": "Add Hero",
+  "header": "Header",
+  "heroName": "Hero name:",
+
+  "selectAHero": "Select a Hero",
+  "selectHero": "Select Hero",
+
+  "tableBasic": "Table Basic",
+  "id": "Id",
+  "name": "Name",
+  "delete": "Delete",
+
+  "tableSort": "Table Sort",
+
+  "tablePage": "Table Page",
+  "showing": "Showing {first} to {last} of {totalRecords} entries",
+
+  "checkboxSelection": "Checkbox Selection",
+
+  "multiSelectBasic": "MultiSelect Basic",
+
+  "multiSelectTemplating": "MultiSelect Templating",
+  "headerContent": "Header Content",
+  "footerContent": "Footer Content",
+
+  "singleSelection": "Single Selection",
+
+  "multipleSelection": "Multiple Selection",
+
+  "newPerson": "New Person",
+  "createNewPerson": "Create New Person",
+  "surname1": "Surname1",
+  "surname2": "Surname2",
+  "gender": "Gender",
+  "birthDate": "BirthDate",
+  "nif": "NIF",
+  "lenguage": "Lenguage",
+  "creationDate": "CreationDate",
+  "is required": "is required",
+  "is optional": "is optional",
+  "save": "save",
+  "editPerson": "Edit Person",
+  "details": "Details",
+  "go back": "go back",
+
+  "clear": "Clear"
+ 
 }

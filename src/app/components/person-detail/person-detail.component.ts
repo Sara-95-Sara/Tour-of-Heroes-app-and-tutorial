@@ -38,7 +38,7 @@ export class PersonDetailComponent implements OnInit {
             if(this.people[i].id === this.person.id) {
               this.people[i] = this.person;
             }
-          } 
+          }
           this.goBack();
           localStorage.setItem('people', JSON.stringify(this.people));
         });
@@ -48,7 +48,7 @@ export class PersonDetailComponent implements OnInit {
   getPerson(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.personService.getPerson(id)
-    .subscribe(person => this.person = person);
+      .subscribe(person => this.person = person);
   }
 
   getPeople(): void {
