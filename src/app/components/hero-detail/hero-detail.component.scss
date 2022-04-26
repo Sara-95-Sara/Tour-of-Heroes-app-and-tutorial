@@ -1,24 +1,47 @@
-label {
-    color: #435960;
-    font-weight: bold;
-  }
-  input {
-    font-size: 1em;
-    padding: .5rem;
-  }
-  button {
-    margin-top: 20px;
-    background-color: #eee;
-    padding: 1rem;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  button:hover {
-    background-color: #cfd8dc;
-  }
-  button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
+.heroDetail {
+  margin: 80px auto;
+  max-width: 500px;
+  height: 300px auto;
+  background-color: rgb(160, 160, 192);
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+
+  &_h2 {
+    color: #3336ea;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
 
+  &_id,
+  &_label {
+    font-size: 20px;
+    margin-left: 50px;
+    color: rgb(57, 57, 164);
+  }
+
+  &_button {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 5px;
+    margin: 10px;
+
+    &_1,
+    &_2 {
+      padding: 30px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      background: #3336ea;
+      border: 1px solid #3336ea;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+  }
+
+}

@@ -1,5 +1,4 @@
 import { IHero } from './../../interfaces/i-hero';
-import { MessageService } from './../../services/message.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { HeroService } from '../../services/hero.service';
@@ -26,7 +25,7 @@ export class HeroesComponent implements OnInit {
     this.heroes.push(hero);
   }
 
-  addSelect(select: IHero){
+  addSelect(select: IHero) {
     this.heroes.push(select);
   }
  
@@ -38,7 +37,7 @@ export class HeroesComponent implements OnInit {
   constructor(
     private heroService: HeroService,
     private primengConfig: PrimeNGConfig,
-    ){}
+  ){}
     
   ngOnInit(): void {
     this.getHeroes();
@@ -68,5 +67,4 @@ export class HeroesComponent implements OnInit {
     this.displayModal = false;
   }
 
-  
 }

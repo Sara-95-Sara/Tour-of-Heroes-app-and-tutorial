@@ -9,9 +9,6 @@ import { Injectable } from '@angular/core';
 
 export class HeroService {
 
-
- // private heroesUrl = 'api/heroes';  // URL to web api
-
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -37,8 +34,6 @@ export class HeroService {
     private http: HttpClient,
   ) { }
 
- 
-
   getHeroes(): Observable<IHero[]> {
     return  of(this.heroes  as IHero[]);
   }
@@ -61,8 +56,8 @@ export class HeroService {
       }
     }
     
-      return  of (search as IHero[]);
-    }
+    return  of (search as IHero[]);
+  }
  
   addHero(hero: IHero): Observable<IHero> {
     hero.id = this.genId(this.heroes);

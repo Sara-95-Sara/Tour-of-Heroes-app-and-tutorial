@@ -1,73 +1,75 @@
 h4 {
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
-    text-align: left;
-    margin-top : 50px;
-    color: red;
+  font-family: 'Lobster', cursive;
+  font-weight: bold;
+  text-align: left;
+  margin-top : 50px;
+  color: red;
+}
+
+.p-button {
+  margin: 0 .5rem 0 0;
+  min-width: 10rem; 
+}
+
+.p-multiselect {
+  min-width: 15rem;
+  width: 18rem;
+  margin-left: 30px;
+  border: 1px solid rgb(240, 156, 156);
+}
+
+.multiselect-custom {
+  .p-multiselect-label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+  }
+  
+  .hero-item-value {
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    display: inline-flex;
+    margin-right: .5rem;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+  }
+  
+  .hero-placeholder {
+    padding: 0.25rem;
+  }
+  
+  .hero-item,
+  .hero-header,
+  .hero-footer {
+    background-color: red;
+    color: white;
+  }
+  
+  .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: red;
+    background: red;
+  }
+  
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box{
+    border-color: rgb(240, 156, 156);
   }
 
-  .p-button {
-    margin: 0 .5rem 0 0;
-    min-width: 10rem; 
-  }
-  
-  
-  .p-multiselect {
-    min-width: 15rem;
-    width: 18rem;
-    margin-left: 30px;
-    border: 1px solid rgb(240, 156, 156);
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    border-color: rgb(240, 156, 156);
   }
 
-    .multiselect-custom {
-      .p-multiselect-label {
-          padding-top: .25rem;
-          padding-bottom: .25rem;
-      }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #C7D2FE;
+    border-color: rgb(240, 156, 156);
+  }
   
-      .hero-item-value {
-          padding: .25rem .5rem;
-          border-radius: 3px;
-          display: inline-flex;
-          margin-right: .5rem;
-          background-color: var(--primary-color);
-          color: var(--primary-color-text);
-      }
-  
-      .hero-placeholder {
-          padding: 0.25rem;
-      }
-  
-      .hero-item,
-      .hero-header,
-      .hero-footer{
-        background-color: red;
-        color: white;
-      }
-  
-      .p-checkbox .p-checkbox-box.p-highlight {
-      border-color: red;
-      background: red;
-      }
-  
-      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box{
-        border-color: rgb(240, 156, 156);
-      }
-      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
-        border-color: rgb(240, 156, 156);
-      }
-      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
-        outline: 0 none;
-        outline-offset: 0;
-        box-shadow: 0 0 0 0.2rem #C7D2FE;
-        border-color: rgb(240, 156, 156);
-      }
-      .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
-        border-color: rgb(240, 156, 156);
-        background: rgb(240, 156, 156);
-        color: #ffffff;
-      }
-    }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+    border-color: rgb(240, 156, 156);
+    background: rgb(240, 156, 156);
+    color: #ffffff;
+  }
+}
   
     .p-multiselect:not(.p-disabled):hover {
       border-color: rgb(250, 207, 207);

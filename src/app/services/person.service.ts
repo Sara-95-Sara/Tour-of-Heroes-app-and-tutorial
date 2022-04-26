@@ -4,13 +4,13 @@ import { Observable, of } from 'rxjs';
 import { Person } from '../interfaces/person';
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonService {
 
+  person: Person = {} as Person;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -52,6 +52,10 @@ export class PersonService {
     }
   ];
 
+  genId(people: Person[]): number {
+    return people.length > 0 ? Math.max(...people.map(person => person.id)) +1 : 1;
+  }
+
   constructor(
     private http: HttpClient,
   ) {}
@@ -67,14 +71,28 @@ export class PersonService {
   }
 
   createPerson(person: Person): Observable<Person> {
+    this.person.id = this.genId(this.people);
+    of(person).subscribe(person => {
+      this.people.push(person);
+      localStorage.setItem('people', JSON.stringify(this.people));
+    });
+    
+
     return of(person);
   }
 
   getPerson(id: number): Observable<Person> {
-    const person = this.people.find(person => person.id === id);
+    const people = localStorage.getItem('people');
 
+    if (people) {
+      return of(JSON.parse(people) as Person);
+    }
+
+    const person = this.people.find(person => person.id === id);
+    
     return of(person as Person);
   }
+
   updatePerson(person: Person): Observable<any> {
     return of(person);
   }

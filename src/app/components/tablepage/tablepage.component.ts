@@ -8,6 +8,7 @@ import { IHero } from 'src/app/interfaces/i-hero';
   templateUrl: './tablepage.component.html',
   styleUrls: ['./tablepage.component.scss']
 })
+
 export class TablepageComponent implements OnInit {
 
   hero: IHero = {} as IHero;
@@ -52,6 +53,5 @@ export class TablepageComponent implements OnInit {
   isFirstPage(): boolean {
     return this.heroes ? this.first === 0 : true;
   }
-
 
 }

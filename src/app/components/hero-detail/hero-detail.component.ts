@@ -14,7 +14,6 @@ export class HeroDetailComponent implements OnInit {
   
   hero: IHero | undefined;
 
-
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
@@ -41,4 +40,5 @@ export class HeroDetailComponent implements OnInit {
         .subscribe(() => this.goBack())
     }
   }
+  
 }

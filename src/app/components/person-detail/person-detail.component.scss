@@ -1,16 +1,55 @@
+.personDetail {
+  margin: 80px auto;
+  max-width: 500px;
+  height: 300px auto;
+  background-color: rgb(160, 160, 192);
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  
+  &_h2 {
+    color: #3336ea;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  &_id,
+  &_label {
+    font-size: 20px;
+    color: rgb(57, 57, 164);
+  }
 
-h2{
-    color: blue;
-}
-.detail {
-    margin-left: 50px;
-
-    button{
-        margin: 5px;
+  &_id {
+    padding-left: 35px;
+  }
+  
+  &_button,
+  &_label  {
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+  
+    &_1,
+    &_2 {
+      padding: 30px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      background: #3336ea;
+      border: 1px solid #3336ea;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+      border-radius: 6px;
+      font-size: 15px;
     }
 
-    input{
-        margin: 5px;
-        width: 150px;
+    &_2 {
+        text-align: end;
     }
+  }
 }

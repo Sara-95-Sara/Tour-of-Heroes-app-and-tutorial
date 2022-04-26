@@ -8,6 +8,7 @@ import { IHero } from 'src/app/interfaces/i-hero';
   styleUrls: ['./multi-select-templating.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class MultiSelectTemplatingComponent implements OnInit {
 
   hero: IHero = {} as IHero;

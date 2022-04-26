@@ -1,38 +1,41 @@
-<div *ngIf="person" class="detail">
-  <h2>{{person.name | uppercase}} {{ 'details' | translate }}</h2>
-  <div><span>{{ 'id' | translate }}:</span>{{person.id}}</div>
-  <div>
-    <label for="person-name">{{ 'name' | translate }} :</label>
+<div *ngIf="person" class="personDetail">
+  <h2 class = "personDetail_h2">{{person.name | uppercase}} {{ 'details' | translate }}</h2>
+  <hr>
+  <div class = "personDetail_id"><span>{{ 'id' | translate }}: </span>{{person.id}}</div>
+  <div class = "personDetail_label">
+    <label for="person-name">{{ 'name' | translate }}: </label>
     <input id="person-name" [(ngModel)]="person.name" placeholder="Person name">
   </div>
-  <div>
-    <label for="person-surname1">{{ 'surname1' | translate }}:</label>
+  <div class = "personDetail_label">
+    <label for="person-surname1">{{ 'surname1' | translate }}: </label>
     <input id="person-surname1" [(ngModel)]="person.surname1" placeholder="Person Surname 1">
   </div>
-  <div>
-    <label for="person-surname2">{{ 'surname2' | translate }}:</label>
+  <div class = "personDetail_label">
+    <label for="person-surname2">{{ 'surname2' | translate }}: </label>
     <input id="person-surname2" [(ngModel)]="person.surname2" placeholder="Person Surname 2">
   </div>
-  <div>
-    <label for="person-gender">{{ 'gender' | translate }}:</label>
+  <div class = "personDetail_label">
+    <label for="person-gender">{{ 'gender' | translate }}: </label>
     <input id="person-gender" [(ngModel)]="person.gender" placeholder="Person Gender">
   </div>
-  <div>
+  <div class = "personDetail_label">
     <label for="person-birthDate">{{ 'birthDate' | translate }}: </label>
     <input id="person-birthDate" [(ngModel)]="person.birthDate" placeholder="Person BirthDate">
   </div>
-  <div>
+  <div class = "personDetail_label">
     <label for="person-nif">{{ 'nif' | translate }}: </label>
     <input id="person-nif" [(ngModel)]="person.nif" placeholder="Person NIF">
   </div>
-  <div>
+  <div class = "personDetail_label">
     <label for="person-lenguage">{{ 'lenguage' | translate }}: </label>
     <input id="person-lenguage" [(ngModel)]="person.lenguage" placeholder="Person Lenguage">
   </div>
-  <div>
+  <div class = "personDetail_label">
     <label for="person-creationDate">{{ 'creationDate' | translate }}: </label>
     <input id="person-creationDate" [(ngModel)]="person.creationDate" placeholder="Person CreationDate">
   </div>
-  <button type="button" (click)="goBack()">{{ 'go back' | translate }}</button>
-  <button type="button" (click)="save()">{{ 'save' | translate }}</button>
+  <div class = "personDetail_button">
+    <button class = "personDetail_button_1" type="button" (click)="goBack()">{{ 'go back' | translate }}</button>
+    <button class = "personDetail_button_2" type="button" (click)="save()">{{ 'save' | translate }}</button>
+  </div>
 </div>

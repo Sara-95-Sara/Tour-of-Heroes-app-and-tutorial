@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Person } from 'src/app/interfaces/person';
 import { PersonService } from '../../services/person.service';
 import  { Location } from '@angular/common';
@@ -6,7 +6,8 @@ import  { Location } from '@angular/common';
 @Component({
   selector: 'app-create-people',
   templateUrl: './create-people.component.html',
-  styleUrls: ['./create-people.component.scss']
+  styleUrls: ['./create-people.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CreatePeopleComponent implements OnInit {
 
@@ -49,5 +50,5 @@ export class CreatePeopleComponent implements OnInit {
         localStorage.setItem('people', JSON.stringify(this.people));
       });
   }
-  
+
 }

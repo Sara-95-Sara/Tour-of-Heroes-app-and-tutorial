@@ -12,8 +12,8 @@ export class MultiSelectBasicComponent implements OnInit {
 
   hero: IHero = {} as IHero;
   
-  
   selectedIHeroes: IHero[];
+
   @Input() heroes: IHero[];
 
   constructor(

@@ -1,4 +1,3 @@
-
 import { IHero } from './../../interfaces/i-hero';
 import { Component, OnInit, Input, Output,  EventEmitter, ViewEncapsulation } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
@@ -13,7 +12,6 @@ export class DropdownComponent implements OnInit {
 
   hero: IHero = {} as IHero; 
 
-  
   @Input() heroes: IHero[];
   
   @Input() selectedHero: IHero;
@@ -31,4 +29,5 @@ export class DropdownComponent implements OnInit {
   ngOnInit(): void {;
     this.primengConfig.ripple = true;
   }
+
 }

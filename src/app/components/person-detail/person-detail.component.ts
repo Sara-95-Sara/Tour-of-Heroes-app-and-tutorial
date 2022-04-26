@@ -9,6 +9,7 @@ import  { Location } from '@angular/common';
   templateUrl: './person-detail.component.html',
   styleUrls: ['./person-detail.component.scss']
 })
+
 export class PersonDetailComponent implements OnInit {
 
   person: Person = {} as Person;
@@ -26,11 +27,11 @@ export class PersonDetailComponent implements OnInit {
     this.getPeople();
   }
 
-  goBack() : void{
+  goBack() : void {
     this.location.back();
   }
  
-  save() : void{
+  save() : void {
     if (this.person) {
       this.personService.updatePerson(this.person)
         .subscribe(() => {
@@ -48,7 +49,7 @@ export class PersonDetailComponent implements OnInit {
   getPerson(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.personService.getPerson(id)
-      .subscribe(person => this.person = person);
+      .subscribe(person =>  this.person = person);
   }
 
   getPeople(): void {

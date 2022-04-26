@@ -8,16 +8,15 @@ import { IHero } from 'src/app/interfaces/i-hero';
   templateUrl: './table-sort.component.html',
   styleUrls: ['./table-sort.component.scss']
 })
+
 export class TableSortComponent implements OnInit {
 
   hero: IHero = {} as IHero;
 
   @Input() heroes: IHero[];
 
-
   @Output() deleteHeroChange= new EventEmitter<IHero>();
 
-  
   constructor(
     private primengConfig: PrimeNGConfig,
   ) { }
@@ -30,4 +29,5 @@ export class TableSortComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.deleteHeroChange.emit(hero);
   }
+  
 }

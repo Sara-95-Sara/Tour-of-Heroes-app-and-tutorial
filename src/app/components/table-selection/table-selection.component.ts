@@ -8,6 +8,7 @@ import { MessageService, PrimeNGConfig } from 'primeng/api';
   providers: [MessageService],
   styleUrls: ['./table-selection.component.scss']
 })
+
 export class TableSelectionComponent implements OnInit {
 
   hero: IHero = {} as IHero;
@@ -19,7 +20,6 @@ export class TableSelectionComponent implements OnInit {
   @Input() heroes: IHero[];
 
   @Output() deleteHeroChange= new EventEmitter<IHero>();
-
 
   constructor(
     private messageService: MessageService,
@@ -38,4 +38,5 @@ export class TableSelectionComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.deleteHeroChange.emit(hero)
   }
+  
 }

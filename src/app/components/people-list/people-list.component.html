@@ -1,6 +1,8 @@
-<button type="button" class="new" routerLink="/createPeople">
-  {{ 'newPerson' | translate }}
-</button>
+<div class="new">
+  <button type="button" class="new_button" routerLink="/createPeople">
+    {{ 'newPerson' | translate }}
+  </button>
+</div>
 
 <p-table [value]="people">
   <ng-template pTemplate="header">

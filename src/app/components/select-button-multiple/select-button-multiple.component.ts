@@ -7,6 +7,7 @@ import { IHero } from 'src/app/interfaces/i-hero';
   templateUrl: './select-button-multiple.component.html',
   styleUrls: ['./select-button-multiple.component.scss']
 })
+
 export class SelectButtonMultipleComponent implements OnInit {
    
   hero: IHero = {} as IHero;

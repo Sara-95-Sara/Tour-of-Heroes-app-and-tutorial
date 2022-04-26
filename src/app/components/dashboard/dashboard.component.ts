@@ -7,7 +7,9 @@ import { IHero } from '../../interfaces/i-hero';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent implements OnInit {
+
   heroes: IHero[] = [];
 
   constructor(private heroService: HeroService) { }
@@ -18,7 +20,7 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
   }
 
 }
